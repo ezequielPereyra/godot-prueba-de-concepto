@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Jugador.png" type="Texture" id=1]
+[ext_resource path="res://jugadorScript.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Idle"
@@ -38,11 +39,13 @@ tracks/0/keys = {
 extents = Vector2( 29.9324, 37.7613 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 5, 5 )
 texture = ExtResource( 1 )
 hframes = 4
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 9.0
